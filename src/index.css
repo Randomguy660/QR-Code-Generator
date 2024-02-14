@@ -1,0 +1,33 @@
+body{
+  display: flex;
+  justify-content: center;
+}
+.container{
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+
+  & label{
+    font-family: 'consolas', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    background: linear-gradient(to right, hsl(0, 0%, 20%), hsl(0, 0%, 50%), hsl(0, 0%, 20%));
+    background-size: 200%;
+    background-clip: text;
+    color: transparent;
+    animation: animateBG 1s linear infinite 500ms;
+    flex: 1;
+  }
+  & input{
+    font-size: 30px;
+    width: 250px;
+  }
+}
+@keyframes animateBG{
+  0%{
+    background-position-x: 0px;
+  }
+  100%{
+    background-position-x: 200%;
+  }
+}
